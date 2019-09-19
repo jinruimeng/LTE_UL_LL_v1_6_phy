@@ -5,14 +5,14 @@ clc;
 N_subframes = 800;%帧的数量
 col = 2400;%一帧中导频的数量
 break_num = 1200;%截断长度
-time = 5;%轮数
+time = 10;%轮数
 time2 = 1;%在一个速度上保持的轮数
-SNR_vec = 5;
+SNR_vec = 10;
 path_a = 'E:\workspace\keyan\channelDataP_a.xlsx';
 path_b = 'E:\workspace\keyan\channelDataP_b.xlsx';
 % types = ["PedA", "PedB", "PedBcorr", "VehA", "VehB", "TU", "RA", "HT"];
-types = ["VehA", "VehB", "TU", "RA", "HT"];
-% types = ["VehA", "VehB", "TU"];
+% types = ["VehA", "VehB", "TU", "RA", "HT"];
+types = ["HT"];
 
 for k = 1:length(types)
     type = char(types(k));
