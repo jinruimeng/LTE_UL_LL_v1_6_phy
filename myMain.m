@@ -84,6 +84,6 @@ for k = 1:length(types)
     end
 end
 
-sprintf("跑完了！");
+disp("跑完了！");
 
 
