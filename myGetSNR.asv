@@ -1,18 +1,18 @@
 N = 1024;
+M = 1600;
 
-filename = 'E:\workspace\keyan\channelDataP.xlsx';
-[status,sheets] = xlsfinfo(filename);
+filename = '';
+[status,sheets] = xlsfinfo(path);
 size_sheet = size(sheets);
 data_num = size_sheet(2);
 
-for data_index = 1:data_num
-    eval(['data', num2str(data_index),'= xlsread(filename, cell2mat(sheets(data_index)));']);
+for data_index = 0:data_num
+    num = xlsread(filename, cell2mat(sheets(2));)
 end
 
-for data_index = 1:data_num
-    fprintf('%d start!\n', data_index);
-    eval(['size_data = size(data', data_index, ');']);
-    M = size_data(1);
+
+for data_index = 0:data_num
+    fprintf('%d start!\n', data_index)
     eval(['data',num2str(data_index) ,'2=','data',num2str(data_index),'(:,1:N);']);
     for j = 1:N
         eval(['tmp =  mean(data',num2str(data_index),'2(:,j));']);
