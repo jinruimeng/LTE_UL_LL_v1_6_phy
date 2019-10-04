@@ -1,6 +1,9 @@
+clear;
+clc;
+
 N = 1024;
 
-filename = 'E:\workspace\keyan\channelDataP.xlsx';
+filename = 'E:\workspace\keyan\channelDataP_a.xlsx';
 [status,sheets] = xlsfinfo(filename);
 size_sheet = size(sheets);
 data_num = size_sheet(2);
@@ -11,7 +14,7 @@ end
 
 for data_index = 1:data_num
     fprintf('%d start!\n', data_index);
-    eval(['size_data = size(data', data_index, ');']);
+    eval(['size_data = size(data', num2str(data_index), ');']);
     M = size_data(1);
     eval(['data',num2str(data_index) ,'2=','data',num2str(data_index),'(:,1:N);']);
     for j = 1:N
