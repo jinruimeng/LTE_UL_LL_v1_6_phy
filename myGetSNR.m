@@ -1,6 +1,9 @@
+clear;
+clc;
+
 N = 1024;
 
-filename = 'E:\workspace\keyan\channelDataP.xlsx';
+filename = 'E:\workspace\keyan\channelDataP_a.xlsx';
 [status,sheets] = xlsfinfo(filename);
 size_sheet = size(sheets);
 data_num = size_sheet(2);
